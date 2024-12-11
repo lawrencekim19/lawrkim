@@ -1,80 +1,139 @@
-/* General Reset */
 body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to bottom right, #f7f9fc, #dce6f0);
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+   background-color: #badbf1;
+ }
+ 
+ #maindiv {
+   display: grid;
+   grid-template-columns: 1fr 2fr;
+   gap: 20px;
+   width: 90%;
+   margin: auto;
+   padding: 20px;
+ }
+ 
+ #inputdiv, #outputdiv {
+   padding: 20px;
+   border: 1px solid #ebe6e6;
+   border-radius: 10px;
+   background-color: #fff;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ }
+ 
+ #footerdiv {
+   display: block;
+   grid-column: 1 / -1;
+   text-align: center;
+   margin-top: 20px;
+   padding: 20px;
+ }
+ 
+ h2 {
+   margin-top: 0;
+ }
+ 
+ label {
+   display: block;
+   margin-top: 10px;
+ }
+ 
+ input, select, button {
+   width: 100%;
+   padding: 10px;
+   margin-top: 5px;
+   border: 1px solid #9c9595;
+   border-radius: 5px;
+ }
+ 
+ button {
+   background-color: #007bff;
+   color: white;
+   cursor: pointer;
+ }
+ 
+ button:hover {
+   background-color: #0056b3;
+ }
+ 
+ table {
+   width: 100%;
+   border-collapse: collapse;
+   margin-top: 20px;
+ }
+ 
+ th, td {
+   text-align: center;
+   padding: 10px;
+ }
+ 
+ tfoot {
+   font-weight: bold;
+ }
+ 
+ footer {
+   margin-top: 20px;
 }
 
-header {
-    text-align: center;
-    padding: 2rem;
-    background-color: #6c63ff;
-    color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+footer .btn-main {
+   display: inline-block;
+   padding: 10px 20px;
+   background-color: #00509E; 
+   color: #FFFFFF;
+   text-decoration: none;
+   border-radius: 5px;
+   font-size: 16px;
+   transition: background-color 0.3s ease;
 }
 
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+footer .btn-main:hover {
+   background-color: #003C71; 
 }
 
-header h2 {
-    font-size: 1.2rem;
-    font-style: italic;
-    margin-top: 0;
-    color: #e4e4f0;
-}
-
-.container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
-    padding: 2rem;
-    margin: auto;
-    width: 80%;
-}
-
-.category {
-    padding: 1.5rem;
-    border-radius: 10px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.2rem;
-    cursor: pointer;
-    background: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
-    color: #6c63ff;
-}
-
-.category:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    background-color: #e0e8ff;
-}
-
-#output {
-    margin: 1rem auto;
-    padding: 1rem;
-    width: 80%;
-    text-align: center;
-    font-size: 1.2rem;
-    font-style: italic;
-    color: #6c63ff;
-    border: 2px dashed #6c63ff;
-    border-radius: 5px;
-    background: #f4f7ff;
-}
-
-footer {
-    margin-top: auto;
-    text-align: center;
-    padding: 1rem;
-    background-color: #6c63ff;
-    color: white;
-    font-size: 0.9rem;
-}
+ 
+ dialog {
+   border: none;
+   border-radius: 10px;
+   padding: 20px;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+   text-align: center;
+   width: 400px;
+   background-color: #ffffff;
+ }
+ 
+ dialog::backdrop {
+   background-color: rgba(0, 0, 0, 0.5);
+ }
+ 
+ .modal-buttons {
+   display: flex;
+   justify-content: center;
+   gap: 10px;
+ }
+ 
+ .modal-buttons button {
+   padding: 10px 20px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 16px;
+ }
+ 
+ .modal-buttons #btnConfirm,
+ .modal-buttons #btnYes {
+   background-color: #28a745;
+   color: white;
+ }
+ 
+ .modal-buttons #btnCancel,
+ .modal-buttons #btnNo {
+   background-color: #dc3545;
+   color: white;
+ }
+ 
+ @media (max-width: 768px) {
+   #maindiv {
+     grid-template-columns: 1fr;
+   }
+ }
